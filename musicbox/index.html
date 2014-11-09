@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="US-ASCII">
+	<title>Log In</title>
+	<link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' />
+	<link rel='stylesheet' href='bootstrap/css/login.css' />
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var height = $(window).height();
+			var slogan = document.getElementById("slogan");
+			var marginTop = height/2 - $('#slogan').height()/2 - $(".navbar").height();
+			slogan.style.marginTop = marginTop + 25 + "px";
+			slogan.style.marginBottom = marginTop - 30 + "px";
+
+			$('a[href^="#"]').on('click',function (e) {
+	          e.preventDefault();
+
+	          var target = this.hash,
+	          $target = $(target);
+
+	          $('html, body').stop().animate({
+	              'scrollTop': $target.offset().top
+	          }, 900, 'swing', function () {
+	              window.location.hash = target;
+	          });
+	      	});
+
+	      	$(window).scroll( function(){
+			  //get scroll position
+			  var topWindow = $(window).scrollTop();
+			  //multiply by 1.5 so the arrow will become transparent half-way up the page
+			  var topWindow = topWindow * 1.5;
+			  
+			  //get height of window
+			  var windowHeight = $(window).height();
+			      
+			  //set position as percentage of how far the user has scrolled 
+			  var position = topWindow / windowHeight;
+			  //invert the percentage
+			  position = 1 - position;
+
+			  //define arrow opacity as based on how far up the page the user has scrolled
+			  //no scrolling = 1, half-way up the page = 0
+			  $('.arrow-wrap').css('opacity', position);
+
+	      		
+			});
+		}
+
+		
+	</script>
+</head>
+<body>
+
+	<div class='navbar navbar-default navbar-static-top' role='navigation'>
+		<div class='container'>
+	    	<div class='navbar-header col-xs-12'>
+     			<a class='navbar-brand' href='#'>
+     				<span class="glyphicon glyphicon-headphones"></span> MusicBox
+     			</a>
+     			<a class='navbar-brand' href='#'>
+     				<span class="glyphicon glyphicon glyphicon-th-list"></span>
+     			</a>
+     			<form class="navbar-form navbar-left" role="search">
+			          <input type="text" class="form-control" id="search" placeholder="Search">
+	        	</form>
+		        <a class='navbar-brand navbar-right' href='#' id="login">
+		        	<span class="glyphicon glyphicon glyphicon-user"></span> Log In
+		        </a>
+			</div>
+   		</div><!--- /.container -->
+  	</div> <!-- /.navbar -->
+
+    <div class="jumbotron slogan" id="slogan">
+  		<div class="text">
+			<h1> Welcome to MusicBox Mark II</h1>
+			<h2> Get your Mix out to the world.</h2>
+		</div>
+		<div class="btn-group">
+			<a href="#" role="button" class="btn btn-primary btn-lg">Sign in with Facebook</a>
+			<a href="#" role="button" class="btn btn-danger btn-lg">Sign in with Google</a>
+		</div>
+		<h3>
+			Sign up with email. By clicking "Sign in", you agree to our Terms of Service.
+		</h3>
+	</div>
+
+	<div class="scroll">
+		<div class="container">
+			<a class="arrow-wrap" href="#simplicity">
+    			<span class="arrow"></span>
+  			</a>
+  		</div>
+	</div>
+
+
+	<div class="simplicity" id="simplicity">
+		<div class="container">
+			<div class="col-sm-6">
+				<img src="files/browse.png" width="400px">
+			</div>
+			<div class="col-sm-6">
+				<h1>Browse for the right playlists.</h1>
+				<p>
+					With MusicBox, there is always great music to play. Browse amazing playlists for every mood and genre. Perfect if you don't know what to listen to, or if you're in the mood for something new.
+				</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="space">
+	</div>
+
+	<div class="simplicity">
+		<div class="container">
+			<div class="col-sm-7">
+				<h1>Discover more of Music you'll love.</h1>
+				<p>
+					MusicBox is the best place to discover music. Your Discover page will constantly suggest 
+					new music for you, based on what you are listening to. Your next favourite mixes are waiting.
+				</p>
+			</div>
+			<div class="col-sm-5">
+				<img src="files/devices.png" width="400px">
+			</div>
+		</div>
+	</div>
+
+	<div class="about">
+		<div class="container">
+			<div class="col-sm-4">
+				<h1><span class="glyphicon glyphicon-globe"></span><h1>
+				<p>
+					Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<h1><span class="glyphicon glyphicon-heart-empty"></span><h1>
+				<p>
+					Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do.
+				</p>
+			</div>
+			<div class="col-sm-4">
+				<h1><span class="glyphicon glyphicon-cloud-upload"></span><h1>
+				<p>
+					Two exquisite objection delighted deficient yet its contained. Cordial because are account evident its subject but eat. Can properly followed learning prepared you doubtful yet him. Over many our good lady feet ask that. Expenses own moderate day fat trifling stronger sir domestic feelings. Itself at be answer always exeter up do.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+				Designed with <span class="glyphicon glyphicon-heart"></span> in Seattle.
+		</div>
+	</div>
+
+</body>
+</html>

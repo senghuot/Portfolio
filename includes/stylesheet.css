@@ -1,0 +1,119 @@
+body {
+	background-color: white;
+	display: none;
+}
+
+.page-header {
+	margin-top: 0;
+}
+
+.panel-body {
+	padding-top: 0;
+}
+
+#contact {
+	padding-top: 20px;
+	background-color: white;
+}
+
+#avatar {
+	float: right;
+}
+
+.navigation {
+	margin-left: 270px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.row {
+	padding-top: 10px;
+	display: inline-block;
+}
+
+.github {
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#project {
+	background-color: white;
+	margin-top: 10px;
+}
+
+.jumbotron {
+	text-align: center;
+}
+
+.jumbotron p{
+	font-size: 18px;
+}
+
+.intro {
+	text-align: left;
+}
+
+.thumbnail {
+	width: 300px;
+	padding: 0;
+	margin: 0;
+}
+
+.thumbnail:hover {
+	-webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.thumbnail > p {
+	font-size: 16px;
+	padding: 5px;
+}
+
+
+.thumbnail > p > .btn{
+	display: block;
+	width: 200px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.row > a > img {
+	padding-right: 20px;
+}
+
+.demo {
+	text-decoration: bold;
+}
+
+.boldlink, .boldlink:hover {
+	text-decoration: none;
+	color: #999;
+	font-weight: bold;
+}
+
+.container {
+	width: 940px;
+}
+
+.second-row {
+	margin-top: 35px;
+	display: inline-block;
+}
+
+.comment {
+	font-size: 12px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.footer {
+	background-color: #080808;
+	padding: 25px;
+	color: white;
+	font: 12px;
+	text-align: center;
+}
